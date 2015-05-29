@@ -1,0 +1,121 @@
+body { background-color: gray; } 
+
+#main { 
+	width: 1000px; 
+	margin: 0px auto; 
+	background-color: white;
+}
+		
+.greenBar { 
+	width: 1000px; 
+	height: 50px; 
+	background-color: #19AC63;
+}
+		
+.navigation {
+	width: 300px; 
+	float: left;
+}
+
+/*.navigationContainer { 
+	margin-left: 20px;
+}*/
+			
+.content { 
+	width: 600px; 
+	float: left;
+	margin-left: 50px; 
+}
+		
+footer { 
+	margin: 0px auto; 
+	text-align: center;
+}
+	
+ul, li, li a { 
+	font-family: arial, sans-serif;
+	color: black;
+	list-style-type: none;
+	text-decoration: none;
+	padding-left: 20px; /* this line makes the indentations of folders and subfolders visible; why only one style causes all different indentations, no idea */
+}
+
+.navigation ul {
+	width: 300px;
+	padding-left: 0px;
+}
+	         
+.directory { 
+	margin-top: 10px;
+	display: inline-block; 
+}
+			 
+.file.current, .dir.current > span { 
+	font-weight: bold; 
+}
+							
+li > .icon { width: 15px; 
+			 height: 15px; 
+			 display: inline-block;
+			 margin-right: 2px;
+			}
+			
+li.file > .icon { 
+	background-image: url(../images/file-icon.gif); 
+} 
+
+li.dir > .icon { 
+	background-image: url(../images/folder-closed-icon.gif); 
+} 
+
+li.dir.current > .icon { 
+	background-image: url(../images/folder-open-icon.gif); 
+} 
+
+.note { font-size: 12px; 
+		font-style: italic;
+	  }
+	  
+.headerTitle { 
+	font-size: 50px; 
+	font-family: arial;
+	font-weight: bold;
+	text-align: center;
+	vertical-align: bottom;
+	/*color: white;
+	background-color: black;*/
+}
+
+.editButton { 
+	float: right;
+	clear: both;
+}
+	
+
+
+
+/* ACCORDIAN FOR NAV MENU */
+
+.dir, .file {
+	padding: 10px;
+	border: 1px solid black;
+	border-bottom: 0; 
+	/*&:last-of-type {*/
+	border-bottom: 1px solid black; 
+}
+/*a {
+	display: block;
+	color: black;
+	font-weight: bold;
+}*/
+   /*}*/
+.file {
+	border-top: 0; 
+	font-size: 16px;
+	/*&:last-of-type {*/
+	border-top: 1px solid white;
+	position: relative;
+	top: -1px;
+}
+/*}
+}*/
