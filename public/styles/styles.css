@@ -1,0 +1,104 @@
+body {
+    background-color: gray;
+} 
+
+#main { 
+    width: 1000px; 
+    margin: 0px auto; 
+    background-color: white;
+}
+
+.greenBar { 
+    width: 1000px; 
+    height: 50px; 
+    background-color: #19AC63;
+}
+
+.navigation {
+    width: 300px; 
+    float: left;
+}
+
+.content {
+    width: 600px; 
+    float: left;
+    margin-left: 50px; 
+}
+
+.directory { 
+    margin-top: 10px;
+    display: inline-block; 
+}
+
+.file.current, .dir.current > span { 
+    font-weight: bold; 
+}
+
+li > .icon {
+    width: 15px; 
+    height: 15px; 
+    display: inline-block;
+    margin-right: 4px;
+    vertical-align: middle;
+}
+
+li.file > .icon { 
+    background-image: url(../images/file-icon.gif); 
+} 
+
+li.dir > .icon { 
+    background-image: url(../images/folder-closed-icon.gif); 
+} 
+
+li.dir.current > .icon { 
+    background-image: url(../images/folder-open-icon.gif); 
+} 
+
+.note {
+    font-size: 12px; 
+    font-style: italic;
+}
+
+.headerTitle { 
+    font-size: 50px; 
+    font-family: arial;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: bottom;
+    /*color: white;
+    background-color: black;*/
+}
+
+.editButton { 
+    float: right;
+    clear: both;
+}
+
+
+
+
+/* Nav Menu Styles */
+#main > nav.navigation .file {
+    border-top: 0; 
+    font-size: 16px;
+    border-top: 1px solid white;
+    position: relative;
+    top: -1px;
+}
+
+#main > nav.navigation ul, li { 
+    font-family: arial, sans-serif;
+    color: #000;
+    list-style-type: none;
+    padding-left: 8px;
+}
+
+#main > nav.navigation a {
+    text-decoration: none;
+    color: #000;
+}
+
+.navigation ul {
+    width: 300px;
+    padding-left: 0px;
+}
