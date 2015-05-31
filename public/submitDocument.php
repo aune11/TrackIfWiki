@@ -2,6 +2,7 @@
     $content    = '';
     $title      = '';
     $directory  = '';
+    $extension  = '';
 
     if (! empty($_GET['page'])) {
         $content = @file_get_contents($_GET['page']);

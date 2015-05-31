@@ -8,6 +8,11 @@ body {
     background-color: white;
 }
 
+#main header a {
+    text-decoration: none;
+    color: #000;
+}
+
 .greenBar { 
     width: 1000px; 
     height: 50px; 
