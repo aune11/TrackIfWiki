@@ -20,20 +20,13 @@
     <body>
         
         <div id="main">
-            <header>
-                <?php
-                    include("header.php");
-                ?>
-            </header>
-            
-            <div class="greenBar"></div>
-            
-            <div style="clear: both;"></div>
+            <?php
+                include("header.php");
+            ?>
             
             <nav class="navigation">
                 
                 <?php
-                    include("search.php");
                     include("navMenu.php");
                 ?>
                 <script>

@@ -1,4 +1,27 @@
 <?php
+
+    // Handle the submitted form
+    if (isset($_POST['contents'])) {
+        $directory = $_POST['directory'];
+        
+        $filename = $_POST['filename'];
+        $contents = $_POST['contents'];
+        
+        if (empty($filename)) { 
+            echo "No file name entered.  File not submitted";
+            die;
+        }
+        
+        //open the file and choose the mode; since file shouldn't exist, will create the file
+        $filePath = $directory . DIRECTORY_SEPARATOR . $filename . '.md';
+        file_put_contents($filePath, $contents);
+
+        header('Location: /index.php?page=' . rawurlencode($filePath));
+        die;
+    }
+
+
+
     $content    = '';
     $title      = '';
     $directory  = '';
@@ -49,7 +72,6 @@
             <div style="clear: both;"></div>
             <nav class="navigation">
                 <?php
-                    include("search.php");
                     include("navMenu.php");
                 ?>
             </nav>
@@ -65,7 +87,7 @@
 
                 <p>If there are images in your document, please submit the image files via the submission form at the bottom of the page.</p>
 
-                <form action="fileSubmit.php" method="post">
+                <form action="/submitDocument.php" method="post">
                     <p>
                         <input type="hidden" name="directory" value="<?php echo htmlentities($directory); ?>" />
                         <input type="text" name="filename" value="<?php echo htmlentities($title); ?>" class="filename" />
